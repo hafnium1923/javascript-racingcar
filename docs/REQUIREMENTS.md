@@ -16,6 +16,7 @@
 - 사용자가 잘못된 입력 값을 작성한 경우 에러 메시지를 보여주고, 다시 입력
 
 ## 프로그래밍 요구사항
+
 - 변수 선언시 var를 사용하지 않는다. let, const를 사용한다.
 - 전역 변수를 만들지 않는다.
 - 축약하지 않는다.
@@ -24,44 +25,56 @@
 - 함수(또는 메서드)의 길이가 10라인을 넘어가지 않도록 구현한다.
 - 함수(또는 메서드)가 한 가지 일만 하도록 만든다.
 - 함수(또는 메서드)의 들여쓰기 depth는 2단계까지만 허용한다.
-    예를 들어 while문 안에 if문이 있으면 depth는 2단계 이다.
-    힌트) 함수(또는 메서드) 분리는 들여쓰기 depth를 줄이는 좋은 방법이다.
+  예를 들어 while문 안에 if문이 있으면 depth는 2단계 이다.
+  힌트) 함수(또는 메서드) 분리는 들여쓰기 depth를 줄이는 좋은 방법이다.
 - else 예약어를 쓰지 않는다.
 - 도메인 로직과 UI 로직을 분리한다.
 - 모든 도메인 로직에 단위 테스트를 구현한다. (UI 로직은 제외)
 
 ## 과제 진행 요구사항
+
 ### 기능 목록 및 commint 로그 요구사항
+
 - commit 단위는 기능목록단위로 추가
 
 ## 구현 기능
 
-### readLine 객체
-readLine 객체 반환
+### Constant 객체
+메세지 저장소
+### readLine 객체✔️
+readLine 객체 반환 ✔️
 
-### Index
+### App
+
 게임의 시작점
+
 ### InputView 객체
+
 (입력 여기서만 받음)
 readCarNames() - 자동차 이름들 입력
 readRepeatNumber() - 라운드 시도 회수 입력
 
 ### OutputView 객체
+
 printRoundResult() - 실행 결과 출력
 printFinalWinner() - 최종 우승자 출력
 printErrorMessage() - 에러메시지 출력
 
-### RacingRandomNumberGenerator 객체
-generate() - 무작위 숫자 반환
+### RacingRandomNumberGenerator 객체✔️
+
+generate() - 무작위 숫자 반환✔️
 
 ### RacingDistanceMaker 객체
+
 makeRaceDistance()- 반환된 숫자를 바탕으로 해당 라운드 자동차 별 이동여부를 배열로 반환
 
 ### ErrorHandler
+
 isRightRepeatNum() - 라운드 시도 유효성 검사 (자연수만 가능 함)
 isRightCarName() - 자동차 이름 유효성 검사 (5자 이하만 가능함)
 
 ### RacingCarGame 클래스
+
 (InputView, OutputView 사용 X)
 updateDistance() - 라운드 별 거리 업데이트
 resultOfTheGame() - 최종 우승자 선별
