@@ -5,6 +5,7 @@ const MESSAGES = {
   resultTitle: "실행 결과\n",
   winnerTest: "가 최종 우승했습니다,\n",
   nameError: "[ERROR] 자동차 이름은 5자 이하로 입력해주세요.\n",
+  noCarError: "[ERROR] 자동차는 1개 이상 입력해주세요.\n",
   rangeError: "[ERROR] 횟수는 자연수로 입력해주세요.\n",
 };
 

@@ -69,10 +69,10 @@ generate() - 무작위 숫자 반환✔️
 
 makeRaceDistance()- 반환된 숫자를 바탕으로 해당 라운드 자동차 별 이동여부를 배열로 반환✔️
 
-### ErrorHandler
+### ErrorHandler✔️
 
 isRightRepeatNum() - 라운드 시도 유효성 검사 (자연수만 가능 함)
-isRightCarName() - 자동차 이름 유효성 검사 (5자 이하만 가능함)
+isRightCarName() - 자동차 이름 유효성 검사 (5자 이하만 가능함)✔️
 
 ### RacingCarGame 클래스
 
