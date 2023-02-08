@@ -52,14 +52,14 @@ readLine 객체 반환 ✔️
 ### InputView 객체
 
 (입력 여기서만 받음)
-readCarNames() - 자동차 이름들 입력
+readCarNames() - 자동차 이름들 입력 ✔️
 readRepeatNumber() - 라운드 시도 회수 입력
 
 ### OutputView 객체
 
 printRoundResult() - 실행 결과 출력
 printFinalWinner() - 최종 우승자 출력
-printErrorMessage() - 에러메시지 출력
+printErrorMessage() - 에러메시지 출력✔️
 
 ### RacingRandomNumberGenerator 객체✔️
 
