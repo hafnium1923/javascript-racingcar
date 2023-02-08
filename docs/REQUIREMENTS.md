@@ -65,9 +65,9 @@ printErrorMessage() - 에러메시지 출력
 
 generate() - 무작위 숫자 반환✔️
 
-### RacingDistanceMaker 객체
+### RacingDistanceMaker 객체✔️
 
-makeRaceDistance()- 반환된 숫자를 바탕으로 해당 라운드 자동차 별 이동여부를 배열로 반환
+makeRaceDistance()- 반환된 숫자를 바탕으로 해당 라운드 자동차 별 이동여부를 배열로 반환✔️
 
 ### ErrorHandler
 
