@@ -39,8 +39,9 @@
 
 ## 구현 기능
 
-### Constant 객체
+### Constant 객체✔️
 메세지 저장소
+
 ### readLine 객체✔️
 readLine 객체 반환 ✔️
 
