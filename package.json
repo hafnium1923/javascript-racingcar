@@ -44,5 +44,10 @@
     "presets": [
       "@babel/preset-env"
     ]
+  },
+  "dependencies": {
+    "license": "^1.0.3",
+    "no": "^0.0.1",
+    "yarn": "^1.22.19"
   }
 }
