@@ -8,11 +8,24 @@ class App {
 
   async start() {
     try {
-      let carNames = await InputView.readCarNames(MESSAGES);
-      console.log(carNames);
+      let cars = await InputView.readCarNames(MESSAGES.startText);
+      console.log(cars);
+      this.repeat();
     } catch (e) {
       OutputView.printErrorMessage(MESSAGES.nameError);
       this.start();
+    }
+  }
+
+  async repeat() {
+    try {
+      let repeatNum = await InputView.readRepeatNumber(
+        MESSAGES.repeatAnswerText
+      );
+      console.log(repeatNum);
+    } catch (e) {
+      OutputView.printErrorMessage(MESSAGES.rangeError);
+      this.repeat();
     }
   }
 }
