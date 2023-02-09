@@ -1,9 +1,8 @@
 const rl = require("./readline");
-const ErrorHandler = require("./ErrorHandler");
 const InputView = {
-  readCarNames(MESSAGES) {
+  readCarNames(messages) {
     return new Promise(function (resolve, reject) {
-      rl.question(MESSAGES.startText, (carNames) => {
+      rl.question(messages, (carNames) => {
         const cars = carNames.split(",");
         for (let i = 0; i < cars.length; i++) {
           if (cars[i].length < 1 || cars[i].length > 5) reject(new Error());
@@ -12,15 +11,14 @@ const InputView = {
       });
     });
   },
-  readRepeatNumber(MESSAGES) {
-    rl.question(MESSAGES.repeatAnswerText, (repeatNum) => {
-      try {
-        ErrorHandler.isRightRepeatNum(repeatNum, MESSAGES.rangeError); //오류
-        return Number(repeatNum);
-      } catch (e) {
-        console.log(e);
-        this.readRepeatNumber(MESSAGES);
-      }
+  readRepeatNumber(messages) {
+    return new Promise(function (resolve, reject) {
+      rl.question(messages, (repeatNumber) => {
+        let num = Number(repeatNumber);
+        if (repeatNumber.includes(".") || !Number.isInteger(num) || num < 1)
+          reject(new Error());
+        resolve(repeatNumber);
+      });
     });
   },
 };
