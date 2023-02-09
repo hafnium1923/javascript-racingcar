@@ -1,4 +1,4 @@
-const rl = require("./readline");
+const rl = require("../readline");
 const InputView = {
   readCarNames(messages) {
     return new Promise(function (resolve, reject) {

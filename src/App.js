@@ -1,15 +1,15 @@
-const InputView = require("./InputView");
-const OutputView = require("./OutputView");
+const InputView = require("./View/InputView");
+const OutputView = require("./View/OutputView");
 const MESSAGES = require("./Constant");
+const Model = require("./GameInformation");
 class App {
   play() {
     this.start();
   }
-
+  #gameInf = new Model();
   async start() {
     try {
-      let cars = await InputView.readCarNames(MESSAGES.startText);
-      console.log(cars);
+      this.#gameInf.cars = await InputView.readCarNames(MESSAGES.startText);
       this.repeat();
     } catch (e) {
       OutputView.printErrorMessage(MESSAGES.nameError);
@@ -19,10 +19,10 @@ class App {
 
   async repeat() {
     try {
-      let repeatNum = await InputView.readRepeatNumber(
+      this.#gameInf.repeat = await InputView.readRepeatNumber(
         MESSAGES.repeatAnswerText
       );
-      console.log(repeatNum);
+      console.log(this.#gameInf);
     } catch (e) {
       OutputView.printErrorMessage(MESSAGES.rangeError);
       this.repeat();

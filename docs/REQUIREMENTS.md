@@ -39,6 +39,8 @@
 
 ## 구현 기능
 
+### GameInformation 클래스✔️
+게임의 정보를 가지고 있는 곳✔️
 ### Constant 객체✔️
 메세지 저장소
 
@@ -54,14 +56,15 @@ readLine 객체 반환 ✔️
 (입력 여기서만 받음)
 readCarNames() - 자동차 이름들 입력 ✔️
   자동차 이름 유효성 검사 (5자 이하만 가능함)✔️
-readRepeatNumber() - 라운드 시도 회수 입력
-  라운드 시도 유효성 검사 (자연수만 가능 함)
+readRepeatNumber() - 라운드 시도 회수 입력✔️
+  라운드 시도 유효성 검사 (자연수만 가능 함)✔️
 
 ### OutputView 객체
 
 printRoundResult() - 실행 결과 출력
-printFinalWinner() - 최종 우승자 출력
+printFinalWinner() - 최종 우승자 출력✔️
 printErrorMessage() - 에러메시지 출력✔️
+printMessage() - 전달 받은 메시지 출력✔️
 
 ### RacingRandomNumberGenerator 객체✔️
 
