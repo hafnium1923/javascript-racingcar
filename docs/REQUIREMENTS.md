@@ -51,7 +51,7 @@ readLine 객체 반환 ✔️
 
 게임의 시작점
 
-### InputView 객체
+### InputView 객체✔️
 
 (입력 여기서만 받음)
 readCarNames() - 자동차 이름들 입력 ✔️

@@ -17,6 +17,7 @@ const InputView = {
         let num = Number(repeatNumber);
         if (repeatNumber.includes(".") || !Number.isInteger(num) || num < 1)
           reject(new Error());
+        rl.close();
         resolve(repeatNumber);
       });
     });

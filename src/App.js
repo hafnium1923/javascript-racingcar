@@ -1,12 +1,12 @@
 const InputView = require("./View/InputView");
 const OutputView = require("./View/OutputView");
 const MESSAGES = require("./Constant");
-const Model = require("./GameInformation");
+const GameInformation = require("./GameInformation");
 class App {
   play() {
     this.start();
   }
-  #gameInf = new Model();
+  #gameInf = new GameInformation();
   async start() {
     try {
       this.#gameInf.cars = await InputView.readCarNames(MESSAGES.startText);
@@ -28,6 +28,10 @@ class App {
       this.repeat();
     }
   }
+
+ async game() {
+  
+ }
 }
 
 const app = new App();
