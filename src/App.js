@@ -3,11 +3,16 @@ const OutputView = require("./OutputView");
 const MESSAGES = require("./Constant");
 class App {
   play() {
+    this.start();
+  }
+
+  async start() {
     try {
-      InputView.readCarNames(MESSAGES.startText);
+      let carNames = await InputView.readCarNames(MESSAGES);
+      console.log(carNames);
     } catch (e) {
       OutputView.printErrorMessage(MESSAGES.nameError);
-      InputView.readCarNames(MESSAGES.startText);
+      this.start();
     }
   }
 }
